@@ -1,0 +1,24 @@
+using System;
+
+namespace ContarPalavras
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Digite uma frase:");
+            string frase = Console.ReadLine();
+
+            
+            string[] palavras = frase.Split(new char[] { ' ', '\t', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+
+
+            int numeroDePalavras = palavras.Length;
+
+            Console.WriteLine($"A frase contém {numeroDePalavras} palavras.");
+
+            Console.WriteLine("Pressione qualquer tecla para sair.");
+            Console.ReadKey();
+        }
+    }
+}
